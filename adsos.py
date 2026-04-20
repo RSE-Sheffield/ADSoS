@@ -2,7 +2,7 @@ from dataclasses import dataclass
 import xml.etree.ElementTree as ET
 from typing import Dict, List
 import carla
-from PCLA import PCLA, route_maker, location_to_waypoint
+from PCLA.PCLA import PCLA, route_maker, location_to_waypoint
 
 """ Configuration for spawning an ADS-controlled vehicle """
 class ADSoSVehicleConfiguration:

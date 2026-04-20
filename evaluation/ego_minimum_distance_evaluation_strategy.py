@@ -1,7 +1,7 @@
 from typing import List
 import itertools
-from PCLA import PCLA
-from adsos.evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
+from PCLA.PCLA import PCLA
+from evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
 import carla
 
 class EgoMinimumDistanceEvaluationStrategy(ScenarioEvaluationStrategy):

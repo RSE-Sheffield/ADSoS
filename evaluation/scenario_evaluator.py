@@ -1,6 +1,6 @@
 from typing import List
-from adsos.evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
-from PCLA import PCLA
+from evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
+from PCLA.PCLA import PCLA
 
 class ScenarioEvaluator:
     def __init__(self, evaluation_strategy: ScenarioEvaluationStrategy):

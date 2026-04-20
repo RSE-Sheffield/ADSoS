@@ -1,4 +1,4 @@
-from PCLA import PCLA
+from PCLA.PCLA import PCLA
 from abc import ABC, abstractmethod
 from typing import List
 

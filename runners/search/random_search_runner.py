@@ -5,12 +5,12 @@ from typing import List
 import filecmp
 import carla
 import time
-from adsos.evaluation.scenario_evaluator import ScenarioEvaluator
-from adsos.evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
-from adsos.evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
-from adsos.evaluation.ego_vehicle_logger import EgoVehicleLogger
-from adsos.adsos import ADSoS, ADSoSVehicleConfiguration
-from adsos.world_manager import WorldManager
+from evaluation.scenario_evaluator import ScenarioEvaluator
+from evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
+from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
+from evaluation.ego_vehicle_logger import EgoVehicleLogger
+from adsos import ADSoS, ADSoSVehicleConfiguration
+from world_manager import WorldManager
 
 """ For a given configuration, performs a number of runs and searches for high-quality scenarios """
 class RandomSearchRunner:

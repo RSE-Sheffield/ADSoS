@@ -3,7 +3,7 @@ from typing import List
 import carla
 from pynput.keyboard import Key, Listener
 import time
-from PCLA import PCLA, route_maker, location_to_waypoint
+from PCLA.PCLA import PCLA, route_maker, location_to_waypoint
 
 class WorldManager:
     def __init__(self, client):

@@ -3,9 +3,9 @@ from typing import List
 import filecmp
 import carla
 import time
-from adsos.evaluation.ego_vehicle_logger import EgoVehicleLogger
-from adsos.adsos import ADSoS, ADSoSVehicleConfiguration
-from adsos.world_manager import WorldManager
+from evaluation.ego_vehicle_logger import EgoVehicleLogger
+from adsos import ADSoS, ADSoSVehicleConfiguration
+from world_manager import WorldManager
 
 """ For a given configuration, performs a number of runs and checks the results are consistent """
 class DeterminismRunner:
