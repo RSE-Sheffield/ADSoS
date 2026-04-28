@@ -1,3 +1,7 @@
+"""
+Base class for evaluation of scenarios. Extend this class and
+implement the evlauate_frame method.
+"""
 from PCLA.PCLA import PCLA
 from abc import ABC, abstractmethod
 from typing import List
@@ -9,10 +13,9 @@ class ScenarioEvaluationStrategy(ABC):
     @abstractmethod
     def evaluate_frame(self, world, ego_vehicles: List[PCLA]) -> float:
         pass
-        
+
     def get_scores(self) -> List[float]:
         return self.scores
 
     def reset(self) -> None:
         self.scores = []
-        

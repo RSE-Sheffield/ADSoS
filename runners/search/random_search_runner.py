@@ -21,33 +21,33 @@ class RandomSearchRunner:
         self.end_conditions = []
         self.evaluator = evaluator
         self.results: List[List[int]] = [] # Score, [start, end] TODO: Improve this
-        
+
     def add_end_condition(self, condition):
         condition.set_search_runner(self)
         self.end_conditions.append(condition)
 
     def set_initial_vehicle_configuration(self, vehicles: List[ADSoSVehicleConfiguration]) -> None:
         self.vehicles = vehicles
-        
+
     def any_end_conditions_met(self) -> bool:
         for end_condition in self.end_conditions:
             if end_condition.is_condition_met():
                 return True
-            
+
         return False
-        
+
     def _run_scenarios(self):
         while not self.any_end_conditions_met():
             self._run_single_scenario()
             self._record_config_and_score()
             self.evaluator.reset()
             self._generate_next_configuration()
-            
+
     def _generate_next_configuration(self):
         for i in range(len(self.vehicles)):
             self.vehicles[i].spawn_point_id = random.randint(0, 87)
             self.vehicles[i].end_point_id = random.randint(0, 87)
-        
+
     def _record_config_and_score(self):
         score = self.evaluator.get_score()
         result = [score]
@@ -56,10 +56,10 @@ class RandomSearchRunner:
             result.append(v.end_point_id)
         print("Appending result")
         self.results.append(result)
-        
+
     def _report(self):
         pass # TODO: print some summary statistics
-    
+
     def write(self, file_path):
         with open(file_path, "w") as file:
             json.dump(self.results, file)
@@ -74,18 +74,18 @@ class RandomSearchRunner:
 
             # Create our ADS manager
             adsos = ADSoS(world, self.client)
-            
+
             # Add the vehicles
             adsos.add_vehicles(self.vehicles)
-            
+
             # Main loop
             frame = 0
             while frame < self.steps:
-                adsos.next_action() 
+                adsos.next_action()
                 world.tick()
                 self.evaluator.evaluate_frame(world, adsos.ego_vehicles)
                 frame += 1
-    
+
         finally:
             #settings.no_rendering_mode = False
             settings = world.get_settings()

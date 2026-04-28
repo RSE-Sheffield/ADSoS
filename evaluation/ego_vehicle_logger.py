@@ -18,7 +18,7 @@ class EgoVehicleLogger:
             location = ego_vehicle.vehicle.get_location()
             self.locations[self.frame].append(location)
         self.frame += 1
-            
+
     def serialize_locations(self) -> None:
         for k, v in self.locations.items():
             seralized_location = []

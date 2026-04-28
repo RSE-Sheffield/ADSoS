@@ -6,7 +6,7 @@ from runners.search.random_search_runner import RandomSearchRunner
 from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
 from evaluation.scenario_evaluator import ScenarioEvaluator
 from adsos import ADSoSVehicleConfiguration
-        
+
 
 """ Sample showing spawning of multiple vehicles """
 def main():
@@ -21,7 +21,7 @@ def main():
         ADSoSVehicleConfiguration('model3', "carl_carl_0", 31, 11),
         ADSoSVehicleConfiguration('model3', "carl_carl_1", 27, 14)
     ]
-    
+
     evaluation_strategy = EgoMinimumDistanceEvaluationStrategy()
     evaluator = ScenarioEvaluator(evaluation_strategy)
     end_condition = NumSearchesEndCondition(3)
@@ -30,7 +30,7 @@ def main():
     runner.add_end_condition(end_condition)
     runner.run()
     runner.write("search_results.json")
-    
+
 
 
 if __name__ == '__main__':
