@@ -1,1 +1,9 @@
 site_name: ADSoS Docs
+
+theme:
+  name: readthedocs
+
+markdown_extensions:
+  - toc:
+      baselevel: 0
+      
