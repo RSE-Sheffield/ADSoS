@@ -66,6 +66,17 @@ Four examples are available:
 - **adsos_environment_matrix.py** Runs the same vehicle configuration with an automatically generated range of environmental conditions
 - **adsos_random_search.py** Runs the same environment with multiple vehicle start/end point configurations. Each configuration is evaluated based on the minimum distance reached between any two ego vehicles and the 'best' configuration is reported
 
+## Building the Documentation
+
+### Building Documentation Locally
+
+1. Run `mkdocs build`
+2. The documentation will now be generated in the `site` directory, accessible by opening `index.html`
+
+### Pushing Updated Documentation to github
+
+Running the command `mkdocs gh-deploy` will automatically build the documentation, commit it to the gh-pages branch and push it to github.
+
 ## Using ADSoS
 
 ### Structure of an ADSoS Simulation
