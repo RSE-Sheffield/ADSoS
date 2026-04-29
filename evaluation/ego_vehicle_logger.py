@@ -1,11 +1,16 @@
+"""
+Stores locations of ego vehicles at each frame
+"""
+
 from typing import Dict, List
-import itertools
-from PCLA.PCLA import PCLA
-from evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
-import carla
 import json
+import carla
+from PCLA.PCLA import PCLA
 
 class EgoVehicleLogger:
+    """
+    Stores locations of ego vehicles at each frame
+    """
     def __init__(self, file_path):
         self.file_path = file_path
         self.locations: Dict[int, List[carla.Location]] = {}
@@ -13,6 +18,7 @@ class EgoVehicleLogger:
         self.frame = 0
 
     def record_locations(self, ego_vehicles: List[PCLA]) -> None:
+        """ Stores the location of each ego vehicle at this frame """
         self.locations[self.frame] = []
         for ego_vehicle in ego_vehicles:
             location = ego_vehicle.vehicle.get_location()
@@ -20,6 +26,7 @@ class EgoVehicleLogger:
         self.frame += 1
 
     def serialize_locations(self) -> None:
+        """ Formats the stored locations into a list of floats """
         for k, v in self.locations.items():
             seralized_location = []
             for loc in v:
@@ -28,8 +35,8 @@ class EgoVehicleLogger:
                 seralized_location.append(loc.z)
             self.serialized_locations[k] = seralized_location
 
-
     def write(self) -> None:
+        """ Writes the stored locations to disk """
         self.serialize_locations()
-        with open(self.file_path, "w") as file:
+        with open(self.file_path, "w", encoding="utf-8") as file:
             json.dump(self.serialized_locations, file)

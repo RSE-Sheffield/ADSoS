@@ -1,13 +1,16 @@
+"""
+For a given configuration, performs a number of runs and searches for high-quality scenarios
+"""
 import json
 from typing import List
 import time
 from adsos import ADSoS, ADSoSVehicleConfiguration
 from world_manager import WorldManager
 
-"""
-For a given configuration, performs a number of runs and searches for high-quality scenarios
-"""
 class EnvironmentMatrixRunner:
+    """
+    For a given configuration, performs a number of runs and searches for high-quality scenarios
+    """
     def __init__(self, client, steps, evaluator):
         self.vehicles: List[ADSoSVehicleConfiguration] = []
         self.client = client
@@ -18,6 +21,7 @@ class EnvironmentMatrixRunner:
         self.environment_matrix = []
 
     def set_environment_matrix(self, environment_matrix) -> None:
+        """ Set the environment matrix """
         self.environment_matrix = environment_matrix
 
     def add_end_condition(self, condition):
@@ -26,6 +30,7 @@ class EnvironmentMatrixRunner:
         self.end_conditions.append(condition)
 
     def set_initial_vehicle_configuration(self, vehicles: List[ADSoSVehicleConfiguration]) -> None:
+        """ Give a list of ADSoSVehicleConfiguration objects which will spawn ego vehicles """
         self.vehicles = vehicles
 
     def any_end_conditions_met(self) -> bool:
@@ -59,7 +64,8 @@ class EnvironmentMatrixRunner:
         pass # TODO: print some summary statistics
 
     def write(self, file_path):
-        with open(file_path, "w") as file:
+        """ Write the results to the specified file """
+        with open(file_path, "w", encoding="utf-8") as file:
             json.dump(self.results, file)
 
     def _run_single_scenario(self):

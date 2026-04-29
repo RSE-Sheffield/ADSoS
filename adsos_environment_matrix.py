@@ -5,7 +5,7 @@ import carla
 from runners.search.end_conditions.num_searches_end_condition import NumSearchesEndCondition
 from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
 from evaluation.scenario_evaluator import ScenarioEvaluator
-import matrix_builder as matrix_builder
+import matrix_builder
 from adsos import ADSoSVehicleConfiguration
 
 

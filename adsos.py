@@ -5,8 +5,8 @@ import xml.etree.ElementTree as ET
 from typing import Dict, List
 from PCLA.PCLA import PCLA, route_maker, location_to_waypoint
 
-""" Configuration for spawning an ADS-controlled vehicle """
 class ADSoSVehicleConfiguration:
+    """ Configuration for spawning an ADS-controlled vehicle """
 
     def __init__(self, vehicle, agent, route_file="", route_id=-1,
                  spawn_point_id=-1, end_point_id=-1):

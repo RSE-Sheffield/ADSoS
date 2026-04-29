@@ -3,9 +3,12 @@ Example showing how to test determinism using an XML route file
 """
 import carla
 from runners.verification.determinism_runner import DeterminismRunner
-from adsos import ADSoSVehicleConfiguration
+from .adsos import ADSoSVehicleConfiguration
 
 def main():
+    """
+    Example showing how to test determinism using an XML route file
+    """
 
     host_ip: str = "localhost"
     client = carla.Client(host_ip, 2000)

@@ -1,14 +1,7 @@
-from dataclasses import dataclass
 import json
 import random
 from typing import List
-import filecmp
-import carla
 import time
-from evaluation.scenario_evaluator import ScenarioEvaluator
-from evaluation.scenario_evaluation_strategy import ScenarioEvaluationStrategy
-from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
-from evaluation.ego_vehicle_logger import EgoVehicleLogger
 from adsos import ADSoS, ADSoSVehicleConfiguration
 from world_manager import WorldManager
 
@@ -23,13 +16,16 @@ class RandomSearchRunner:
         self.results: List[List[int]] = [] # Score, [start, end] TODO: Improve this
 
     def add_end_condition(self, condition):
+        """ Adds an end condition to this runner """
         condition.set_search_runner(self)
         self.end_conditions.append(condition)
 
     def set_initial_vehicle_configuration(self, vehicles: List[ADSoSVehicleConfiguration]) -> None:
+        """ Give a list of ADSoSVehicleConfiguration objects which will spawn ego vehicles """
         self.vehicles = vehicles
 
     def any_end_conditions_met(self) -> bool:
+        """ Returns true if any end condition is met """
         for end_condition in self.end_conditions:
             if end_condition.is_condition_met():
                 return True

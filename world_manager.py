@@ -1,13 +1,10 @@
-from dataclasses import dataclass
-from typing import List
-import carla
 from pynput.keyboard import Key, Listener
-import time
-from PCLA.PCLA import PCLA, route_maker, location_to_waypoint
+import carla
 
 class WorldManager:
     def __init__(self, client):
         self.client = client
+        self.world = None
 
     """ Connect to the world, traffic manager and configure synchronous mode """
     def setup_world(self):
@@ -48,7 +45,7 @@ class WorldManager:
             self.world.debug.draw_string(spawn_point.location, str(i), life_time=600)
         self.world.tick()
 
-        def on_press(key):
+        def on_press(_key):
             pass
 
         def on_release(key):
