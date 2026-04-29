@@ -4,8 +4,8 @@ For a given configuration, performs a number of runs and searches for high-quali
 import json
 from typing import List
 import time
-from adsos import ADSoS, ADSoSVehicleConfiguration
 from world_manager import WorldManager
+from ...adsos import ADSoS, ADSoSVehicleConfiguration
 
 class EnvironmentMatrixRunner:
     """
@@ -104,6 +104,7 @@ class EnvironmentMatrixRunner:
             time.sleep(0.5)
 
     def run(self):
+        """ Launches the runner """
         print('Searching scenario configurations')
         self._run_scenarios()
         print('Search completed')

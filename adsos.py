@@ -17,11 +17,12 @@ class ADSoSVehicleConfiguration:
         self.route_file: str = route_file
         self.route_id = route_id
 
-"""
-Manages route creation for, spawning of, running and destruction
-of multiple ADS-controlled vehicles
-"""
 class ADSoS:
+    """
+    Manages route creation for, spawning of, running and destruction
+    of multiple ADS-controlled vehicles
+    """
+
     def __init__(self, world, client):
         self.world = world
         self.client = client
@@ -40,15 +41,23 @@ class ADSoS:
         return route_name
 
     def generate_route_from_file(self, route_file, route_id):
+        """
+        Generates a route file containing a single route from an XML file
+        containing multiple routes
+        """
+
         # Load the routes file
         tree = ET.parse(route_file)
         root = tree.getroot()
         route = None
+
+        # Find the relevant route
         for r in root:
             if r.attrib["id"] == str(route_id):
                 route = r
                 break
 
+        # Write it to disk
         file_name = f'generated_route_{route.attrib["town"]}_{route.attrib["id"]}.xml'
         route.attrib["id"] = "_"
         route.attrib["town"] = "_"
@@ -61,6 +70,7 @@ class ADSoS:
         return file_name
 
     def set_weather(self, conditions: Dict[str, float]) -> None:
+        """ Sets the weather according to the provided conditions """
         weather_params = self.world.get_weather()
         for condition, value in conditions.items():
             weather_params.setattr(condition, value)

@@ -1,12 +1,20 @@
+"""
+For a given configuration, performs a number of runs and searches
+for high-quality scenarios
+"""
 import json
 import random
 from typing import List
 import time
-from adsos import ADSoS, ADSoSVehicleConfiguration
 from world_manager import WorldManager
+from ...adsos import ADSoS, ADSoSVehicleConfiguration
 
-""" For a given configuration, performs a number of runs and searches for high-quality scenarios """
 class RandomSearchRunner:
+    """
+    For a given configuration, performs a number of runs and searches
+    for high-quality scenarios
+    """
+
     def __init__(self, client, steps, evaluator):
         self.vehicles: List[ADSoSVehicleConfiguration] = []
         self.client = client
@@ -40,7 +48,7 @@ class RandomSearchRunner:
             self._generate_next_configuration()
 
     def _generate_next_configuration(self):
-        for i in range(len(self.vehicles)):
+        for i, _v in enumerate(self.vehicles):
             self.vehicles[i].spawn_point_id = random.randint(0, 87)
             self.vehicles[i].end_point_id = random.randint(0, 87)
 
@@ -57,7 +65,7 @@ class RandomSearchRunner:
         pass # TODO: print some summary statistics
 
     def write(self, file_path):
-        with open(file_path, "w") as file:
+        with open(file_path, "w", encoding="utf-8") as file:
             json.dump(self.results, file)
 
     def _run_single_scenario(self):

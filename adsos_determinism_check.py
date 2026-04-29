@@ -1,10 +1,11 @@
+""" Sample checking determinism with multiple vehicles """
 import carla
 from runners.verification.determinism_runner import DeterminismRunner
-from adsos import ADSoSVehicleConfiguration
+from .adsos import ADSoSVehicleConfiguration
 
 
-""" Sample showing spawning of multiple vehicles """
 def main():
+    """ Sample checking determinism with multiple vehicles """
 
     host_ip: str = "localhost"
     client = carla.Client(host_ip, 2000)

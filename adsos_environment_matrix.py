@@ -1,19 +1,17 @@
 """Example showing how to search across a range of environmental parameters"""
-from dataclasses import dataclass
-from runners.search.environment_matrix_runner import EnvironmentMatrixRunner
 import carla
-from runners.search.end_conditions.num_searches_end_condition import NumSearchesEndCondition
+from runners.search.environment_matrix_runner import EnvironmentMatrixRunner
 from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
 from evaluation.scenario_evaluator import ScenarioEvaluator
 import matrix_builder
-from adsos import ADSoSVehicleConfiguration
+from .adsos import ADSoSVehicleConfiguration
 
 
-""" Sample showing spawning of multiple vehicles """
 def main():
+    """ Sample showing spawning of multiple vehicles """
 
-    HOST_IP: str = "localhost"
-    client = carla.Client(HOST_IP, 2000)
+    host_ip: str = "localhost"
+    client = carla.Client(host_ip, 2000)
     client.set_timeout(10.0)
     client.load_world("Town02")
 

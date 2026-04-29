@@ -6,8 +6,8 @@ class WorldManager:
         self.client = client
         self.world = None
 
-    """ Connect to the world, traffic manager and configure synchronous mode """
     def setup_world(self):
+        """ Connect to the world, traffic manager and configure synchronous mode """
         self.world = self.client.get_world()
         traffic_manager = self.client.get_trafficmanager(8000)
 
@@ -16,11 +16,10 @@ class WorldManager:
         if not asynch:
             traffic_manager.set_synchronous_mode(True)
             if not settings.synchronous_mode:
-                synchronous_master = True
                 settings.synchronous_mode = True
                 settings.fixed_delta_seconds = 0.05
             else:
-                synchronous_master = False
+                settings.synchronous_mode = False
         else:
             print("You are currently in asynchronous mode. If this is a traffic simulation, \
                     you could experience some issues. If it's not working correctly, switch to \
@@ -29,13 +28,14 @@ class WorldManager:
         self.world.apply_settings(settings)
         return self.world
 
-    """ Configure the spectator """
     def configure_spectator(self) -> None:
-            # Retrieve the spectator object
-            spectator = self.world.get_spectator()
+        """ Configure the spectator """
+        # Retrieve the spectator object
+        spectator = self.world.get_spectator()
 
-            # Set the spectator with our transform
-            spectator.set_transform(carla.Transform(carla.Location(x=-8, y=108, z=7), carla.Rotation(pitch=-19, yaw=0, roll=0)))
+        # Set the spectator with our transform
+        spectator.set_transform(carla.Transform(carla.Location(x=-8, y=108, z=7),
+                                                carla.Rotation(pitch=-19, yaw=0, roll=0)))
 
     def display_spawn_points(self) -> None:
         spawn_points = self.world.get_map().get_spawn_points()
@@ -53,10 +53,11 @@ class WorldManager:
                 # Stop listener
                 return False
 
+            return True
+
         # Collect events until released
         with Listener(
                 on_press=on_press,
                 on_release=on_release) as listener:
             while listener.is_alive():
                 self.world.tick()
-
