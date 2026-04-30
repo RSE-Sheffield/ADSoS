@@ -12,4 +12,5 @@ class NumSearchesEndCondition(SearchEndCondition):
         self.num_searches = num_searches
 
     def is_condition_met(self):
+        """ Returns true if the required number of searches have been performed """
         return len(self.runner.results) >= self.num_searches

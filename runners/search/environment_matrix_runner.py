@@ -54,9 +54,9 @@ class EnvironmentMatrixRunner:
     def _record_config_and_score(self):
         score = self.evaluator.get_score()
         result = [score]
-        for v in self.vehicles:
-            result.append(v.spawn_point_id)
-            result.append(v.end_point_id)
+        for vehicle in self.vehicles:
+            result.append(vehicle.spawn_point_id)
+            result.append(vehicle.end_point_id)
         print("Appending result")
         self.results.append(result)
 

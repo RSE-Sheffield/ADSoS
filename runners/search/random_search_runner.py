@@ -55,16 +55,16 @@ class RandomSearchRunner:
     def _record_config_and_score(self):
         score = self.evaluator.get_score()
         result = [score]
-        for v in self.vehicles:
-            result.append(v.spawn_point_id)
-            result.append(v.end_point_id)
-        print("Appending result")
+        for vehicle in self.vehicles:
+            result.append(vehicle.spawn_point_id)
+            result.append(vehicle.end_point_id)
         self.results.append(result)
 
     def _report(self):
         pass # TODO: print some summary statistics
 
     def write(self, file_path):
+        """ Writes the results to disk at the specified file path """
         with open(file_path, "w", encoding="utf-8") as file:
             json.dump(self.results, file)
 
@@ -102,6 +102,7 @@ class RandomSearchRunner:
             time.sleep(0.5)
 
     def run(self):
+        """ Runs the search """
         print('Searching scenario configurations')
         self._run_scenarios()
         print('Search completed')

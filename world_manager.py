@@ -1,7 +1,9 @@
+""" Manages the carla world environment """
 from pynput.keyboard import Key, Listener
 import carla
 
 class WorldManager:
+    """ Manages the carla world environment """
     def __init__(self, client):
         self.client = client
         self.world = None
@@ -38,6 +40,10 @@ class WorldManager:
                                                 carla.Rotation(pitch=-19, yaw=0, roll=0)))
 
     def display_spawn_points(self) -> None:
+        """
+        Temporarily overlays spawn points on the map before starting the simulation.
+        Will end after 10 minutes or when the escape key is pressed.
+        """
         spawn_points = self.world.get_map().get_spawn_points()
 
         # Draw the spawn point locations as numbers in the map

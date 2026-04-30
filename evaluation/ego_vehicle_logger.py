@@ -27,13 +27,13 @@ class EgoVehicleLogger:
 
     def serialize_locations(self) -> None:
         """ Formats the stored locations into a list of floats """
-        for k, v in self.locations.items():
+        for key, value in self.locations.items():
             seralized_location = []
-            for loc in v:
+            for loc in value:
                 seralized_location.append(loc.x)
                 seralized_location.append(loc.y)
                 seralized_location.append(loc.z)
-            self.serialized_locations[k] = seralized_location
+            self.serialized_locations[key] = seralized_location
 
     def write(self) -> None:
         """ Writes the stored locations to disk """

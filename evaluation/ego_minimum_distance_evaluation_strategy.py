@@ -15,7 +15,7 @@ class EgoMinimumDistanceEvaluationStrategy(ScenarioEvaluationStrategy):
         super().__init__()
         self.max_evaluation_score: float = 1e6
 
-    def evaluate_frame(self, world, ego_vehicles: List[PCLA]) -> float:
+    def evaluate_frame(self, _world, ego_vehicles: List[PCLA]) -> float:
         """
         Computes a score according to the minimum distance between any two ego vehicles
         """
@@ -29,10 +29,10 @@ class EgoMinimumDistanceEvaluationStrategy(ScenarioEvaluationStrategy):
         frame_score: float = min(1.0 / min_dist, self.max_evaluation_score)
         self.scores.append(frame_score)
 
-    def get_distance(self, v1, v2) -> float:
+    def get_distance(self, vehicle, other_vehicle) -> float:
         """
         Gets the distance between two carla vehicles
         """
-        p1: carla.Location = v1.vehicle.get_location()
-        p2: carla.Location = v2.vehicle.get_location()
-        return p1.distance(p2)
+        location: carla.Location = vehicle.vehicle.get_location()
+        other_location: carla.Location = other_vehicle.vehicle.get_location()
+        return location.distance(other_location)

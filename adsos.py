@@ -52,9 +52,9 @@ class ADSoS:
         route = None
 
         # Find the relevant route
-        for r in root:
-            if r.attrib["id"] == str(route_id):
-                route = r
+        for candidate_route in root:
+            if candidate_route.attrib["id"] == str(route_id):
+                route = candidate_route
                 break
 
         # Write it to disk
