@@ -61,7 +61,7 @@ class RandomSearchRunner:
         self.results.append(result)
 
     def _report(self):
-        pass # TODO: print some summary statistics
+        print("Search completed")
 
     def write(self, file_path):
         """ Writes the results to disk at the specified file path """

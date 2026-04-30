@@ -61,7 +61,7 @@ class EnvironmentMatrixRunner:
         self.results.append(result)
 
     def _report(self):
-        pass # TODO: print some summary statistics
+        print("Search completed")
 
     def write(self, file_path):
         """ Write the results to the specified file """
