@@ -3,6 +3,7 @@ import carla
 from runners.search.environment_matrix_runner import EnvironmentMatrixRunner
 from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
 from evaluation.scenario_evaluator import ScenarioEvaluator
+from evaluation.max_score_aggregator import MaxScoreAggregator
 import matrix_builder
 from .adsos import ADSoSVehicleConfiguration
 
@@ -32,7 +33,8 @@ def main():
 
 
     evaluation_strategy = EgoMinimumDistanceEvaluationStrategy()
-    evaluator = ScenarioEvaluator(evaluation_strategy)
+    score_aggregator = MaxScoreAggregator()
+    evaluator = ScenarioEvaluator(evaluation_strategy, score_aggregator)
 
     runner = EnvironmentMatrixRunner(client=client, steps=150, evaluator=evaluator)
     runner.set_initial_vehicle_configuration(vehicles=vehicles)

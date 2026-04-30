@@ -4,6 +4,7 @@ from runners.search.end_conditions.num_searches_end_condition import NumSearches
 from runners.search.random_search_runner import RandomSearchRunner
 from evaluation.ego_minimum_distance_evaluation_strategy import EgoMinimumDistanceEvaluationStrategy
 from evaluation.scenario_evaluator import ScenarioEvaluator
+from evaluation.max_score_aggregator import MaxScoreAggregator
 from .adsos import ADSoSVehicleConfiguration
 
 
@@ -22,7 +23,8 @@ def main():
     ]
 
     evaluation_strategy = EgoMinimumDistanceEvaluationStrategy()
-    evaluator = ScenarioEvaluator(evaluation_strategy)
+    score_aggregator = MaxScoreAggregator()
+    evaluator = ScenarioEvaluator(evaluation_strategy, score_aggregator)
     end_condition = NumSearchesEndCondition(3)
     runner = RandomSearchRunner(client=client, steps=150, evaluator=evaluator)
     runner.set_initial_vehicle_configuration(vehicles=vehicles)
