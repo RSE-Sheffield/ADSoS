@@ -1,179 +1,442 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>ADSoS Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
-
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">ADSoS Docs</a>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>ADSoS Docs</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#documentation-for-adsos" class="nav-link">Documentation for ADSoS</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#installation" class="nav-link">Installation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#configuring-ego-vehicles" class="nav-link">Configuring Ego Vehicles</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#creating-a-runner" class="nav-link">Creating a Runner</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#creating-an-evaluation-strategy" class="nav-link">Creating an Evaluation Strategy</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#using-end-conditions" class="nav-link">Using End conditions</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
 
-<h1 id="documentation-for-adsos">Documentation for ADSoS</h1>
-<h2 id="installation">Installation</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<h3 id="installing-adsos">Installing ADSoS</h3>
-<h4 id="setting-up-pcla">Setting up PCLA</h4>
-<h4 id="setting-up-adsos">Setting up ADSoS</h4>
-<h3 id="running-the-examples">Running the Examples</h3>
-<h3 id="setting-up-your-own-project">Setting Up Your Own Project</h3>
-<h2 id="configuring-ego-vehicles">Configuring Ego Vehicles</h2>
-<h2 id="creating-a-runner">Creating a Runner</h2>
-<h2 id="creating-an-evaluation-strategy">Creating an Evaluation Strategy</h2>
-<h2 id="using-end-conditions">Using End conditions</h2></div>
-            </div>
-        </div>
+<body class="wy-body-for-nav" role="document">
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> ADSoS Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-    </body>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#python-38">Python 3.8</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#carla">Carla</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installing-adsos">Installing ADSoS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changing-pcla-version">Changing PCLA version</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-the-examples">Running the Examples</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">ADSoS Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation">Installation</h1>
+<p>ADSoS has been tested with:</p>
+<ul>
+<li>Carla 0.9.15</li>
+<li>Python 3.8</li>
+<li>Ubuntu 24.04</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Carla 0.9.15</li>
+<li>Python 3.8</li>
+</ul>
+<h3 id="python-38">Python 3.8</h3>
+<p>Install the <code>pyenv</code> application via your package manager, e.g.</p>
+<p><code>sudo apt install pyenv</code></p>
+<p>Install Python 3.8 using pyenv:</p>
+<p><code>pyenv install 3.8</code></p>
+<p>Open a shell using Python 3.8:</p>
+<p><code>pyenv shell 3.8</code></p>
+<h3 id="carla">Carla</h3>
+<p>Set up and install <a href="https://github.com/carla-simulator/carla/releases/tag/0.9.15">Carla 0.9.15</a> according to <a href="https://carla.readthedocs.io/en/latest/start_quickstart/">its instructions</a></p>
+<h2 id="installing-adsos">Installing ADSoS</h2>
+<p>Using git, clone the ADSoS repository:</p>
+<p><code>git clone git@github.com:MILeach/ADSoS-new.git</code></p>
+<p>Change directory into the ADSoS repository:</p>
+<p><code>cd ADSoS</code></p>
+<p>Pull in the PCLA submodule:</p>
+<p><code>git submodule update</code></p>
+<p>Set up PCLA according to <a href="https://github.com/MasoudJTehrani/PCLA#">its instructions</a></p>
+<h2 id="changing-pcla-version">Changing PCLA version</h2>
+<ul>
+<li><strong>Pulling in Changes</strong> to pull changes from the remote, run the command <code>git submodule update --remote</code></li>
+<li><strong>Changing the remote repo</strong> <ol>
+<li>Navigate into the submodule repo <code>cd PCLA</code></li>
+<li>Remove the old remote <code>git remote remove origin</code></li>
+<li>Add the new remote <code>git remote add origin [link to git repo]</code></li>
+<li>Update <code>git submodule update --remote</code></li>
+</ol>
+</li>
+<li><strong>Syncing a fork on github</strong><ol>
+<li>Navigate to your fork in the web browser</li>
+<li>Click the <code>Sync Fork</code> button</li>
+<li>Click <code>Update Branch</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="running-the-examples">Running the Examples</h2>
+<p>Four examples are available:</p>
+<ul>
+<li><strong>adsos_determinism_check.py</strong> Runs the same vehicle configuration and scenario multiple times, logging the results and checking that there are no differences between the produced results</li>
+<li><strong>adsos_route_file_determinism.py</strong> Runs the same vhicle configuration and scenario multiple times, loggin the results and checking that there are no differences between the produced results files. Equivalent to the above example, except this uses a supplied route file rather than spawn and end points for each ego vehicle</li>
+<li><strong>adsos_environment_matrix.py</strong> Runs the same vehicle configuration with an automatically generated range of environmental conditions</li>
+<li><strong>adsos_random_search.py</strong> Runs the same environment with multiple vehicle start/end point configurations. Each configuration is evaluated based on the minimum distance reached between any two ego vehicles and the 'best' configuration is reported</li>
+</ul>
+<h1 id="building-the-documentation">Building the Documentation</h1>
+<h2 id="building-documentation-locally">Building Documentation Locally</h2>
+<ol>
+<li>Run <code>mkdocs build</code></li>
+<li>The documentation will now be generated in the <code>site</code> directory, accessible by opening <code>index.html</code></li>
+</ol>
+<h2 id="pushing-updated-documentation-to-github">Pushing Updated Documentation to github</h2>
+<p>Running the command <code>mkdocs gh-deploy</code> will automatically build the documentation, commit it to the gh-pages branch and push it to github.</p>
+<h1 id="using-adsos">Using ADSoS</h1>
+<h2 id="structure-of-an-adsos-simulation">Structure of an ADSoS Simulation</h2>
+<p>All ADSoS programs will follow a similar structure.</p>
+<ol>
+<li>Initialise the client and connect to Carla</li>
+<li>Specify ego vehicle configuration</li>
+<li>Construct a <code>runner</code> which will be responsible for mutating the simulation between runs and controlling the simulation execution</li>
+<li>Supply initial configuration and specify how the simulation should change on each iteration</li>
+</ol>
+<h2 id="initialising-the-client-and-connecting-to-carla">Initialising the client and connecting to Carla</h2>
+<p>At the start of our program we must connect to the Carla server</p>
+<pre><code>def main():
+
+    # Connect to the Carla server
+    HOST_IP: str = "localhost"
+    client = carla.Client(HOST_IP, 2000)
+    client.set_timeout(10.0)
+    client.load_world("Town02")
+</code></pre>
+<h2 id="ego-vehicle-configuration">Ego Vehicle Configuration</h2>
+<p>Ego vehicles are specified as a list of <code>ADSoSVehicleConfiguration</code> objects. These are constructed using a vehicle model name, an ADS name and either a spawn and end point id, or a route file and route id.</p>
+<pre><code># Add some vehicles using spawn/end points
+vehicles = [
+    ADSoSVehicleConfiguration('model3', "carl_carl_0", spawn_point_id=31, end_point_id=11),
+    ADSoSVehicleConfiguration('model3', "carl_carl_1", spawn_point_id=27, end_point_id=14)
+]
+</code></pre>
+<h3 id="supported-ads-names">Supported ADS names:</h3>
+<p><strong>SimLingo</strong></p>
+<ul>
+<li>
+<p>Also known as CarLLava.</p>
+</li>
+<li>
+<p><code>simlingo_simlingo</code>: The best-performing agent, which secured <strong>first place</strong> at <a href="https://leaderboard.carla.org">CARLA Leaderboard 2</a> SENSORS track (previously named CarLLava).</p>
+</li>
+</ul>
+<p><strong>LMDrive</strong></p>
+<ul>
+<li>
+<p><code>lmdrive_llava</code>: Best performing LMDrive agent.</p>
+</li>
+<li>
+<p><code>lmdrive_vicuna</code>: Second best performing LMDrive agent.</p>
+</li>
+<li>
+<p><code>lmdrive_llama</code>: Third best performing LMDrive agent.</p>
+</li>
+</ul>
+<p><strong>TransfuserV3</strong></p>
+<ul>
+<li>
+<p>Also known as Transfuser. See <a href="https://ln2697.github.io/lead/docs/transfuser_versions.html">the history of Transfuser</a>.</p>
+</li>
+<li>
+<p><code>tfv3_tf</code>: The main Transfuser agent.</p>
+</li>
+<li>
+<p><code>tfv3_ltf</code>: The LatentTF agent.</p>
+</li>
+<li>
+<p><code>tfv3_lf</code>: The Late_Fusion agent.</p>
+</li>
+<li>
+<p><code>tfv3_gf</code>: The Geometric_Fusion agent.</p>
+</li>
+</ul>
+<p><strong>TransfuserV4</strong></p>
+<ul>
+<li>
+<p>Also know as Transfuser++ for Leaderboard 1.</p>
+</li>
+<li>
+<p><strong>Seeds:</strong> Replace <code>#</code> with the seed number from <strong>0 to 2</strong> (e.g., <code>tfpp_l6_0</code>).</p>
+</li>
+<li>
+<p><code>tfv4_l6_#</code>: Best performing Transfuser++ agent. Second place at CARLA Leaderboard 2 SENSORS track.</p>
+</li>
+<li>
+<p><code>tfv4_lav_#</code>: Transfuser++ not trained on Town02 and Town05.</p>
+</li>
+<li>
+<p><code>tfv4_wp_#</code>: Transfuser++ WP from their paper's appendix.</p>
+</li>
+<li>
+<p><code>tfv4_aim_#</code>: Reproduction of the <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Prakash_Multi-Modal_Fusion_Transformer_for_End-to-End_Autonomous_Driving_CVPR_2021_paper.html">AIM</a> method.</p>
+</li>
+</ul>
+<p><strong>TransfuserV5</strong></p>
+<ul>
+<li>
+<p>Also known as Transfuser++ for Leaderboard 2. This version has a bit of similar performance as TransfuserV4</p>
+</li>
+<li>
+<p><code>tfv5_alltowns</code>: This agent is trained with all towns.</p>
+</li>
+<li>
+<p><code>tfv5_notown13</code>: This agent is trained excluding Town13.</p>
+</li>
+</ul>
+<p><strong>TransfuserV6</strong></p>
+<ul>
+<li>
+<p>The most recent Transfuser agent, also known as Lead.</p>
+</li>
+<li>
+<p><code>tfv6_regnet</code>: Their best-performing agent that uses regnety032.</p>
+</li>
+<li>
+<p><code>tfv6_resnet</code>: The second-best-performing agent that uses resnet34.</p>
+</li>
+<li>
+<p><code>tfv6_4cameras</code>: Uses 4cameras and resnet34.</p>
+</li>
+<li>
+<p><code>tfv6_noradar</code>: Uses resnet34 but no radar sensor.</p>
+</li>
+<li>
+<p><code>tfv6_visiononly</code>: Vision-only driving model and resnet34.</p>
+</li>
+<li>
+<p><code>tfv6_notown13</code>: Uses resnet34 but Town13 is excluded.</p>
+</li>
+</ul>
+<p><strong>CaRL</strong></p>
+<ul>
+<li>
+<p><code>carl_carl_#</code>: CaRL agent with a driving score of 64. Replace <code>#</code> with <strong>0 or 1</strong>.</p>
+</li>
+<li>
+<p><code>carl_carlv11</code>: The best CaRL agent with a driving score of 73. Best open-source RL planner on longest6 v2 and nuPlan.</p>
+</li>
+</ul>
+<p><strong>Roach</strong></p>
+<ul>
+<li><code>carl_roach_#</code>: The Roach planner agent (<a href="https://arxiv.org/abs/2108.08265">paper</a>) reproduced by the authors of <a href="https://github.com/autonomousvision/CaRL/tree/main">CaRL</a>. Replace <code>#</code> with a number from <strong>0 to 4</strong> for the 5 available seeds.</li>
+</ul>
+<p><strong>PlanT</strong></p>
+<ul>
+<li><code>carl_plant_#</code>: The PlanT planner agent (<a href="https://arxiv.org/abs/2210.14222">paper</a>) reproduced by the authors of <a href="https://github.com/autonomousvision/CaRL/tree/main">CaRL</a>. Replace <code>#</code> with a number from <strong>0 to 4</strong> for the 5 available seeds.</li>
+</ul>
+<p><strong>PlanT 2</strong></p>
+<ul>
+<li><code>plant2_plant2_#</code>: The PlanT 2.0 agent. Replace <code>#</code> with a number from <strong>0 to 2</strong> for the 3 available seeds.</li>
+</ul>
+<p><strong>NEAT</strong></p>
+<ul>
+<li>
+<p><code>neat_neat</code></p>
+</li>
+<li>
+<p><code>neat_aimbev</code></p>
+</li>
+<li>
+<p><code>neat_aim2dsem</code></p>
+</li>
+<li>
+<p><code>neat_aim2ddepth</code></p>
+</li>
+</ul>
+<p><strong>Interfuser</strong></p>
+<ul>
+<li><code>if_if</code>: Second best performing <a href="https://leaderboard.carla.org">CARLA Leaderboard 1</a> SENSORS track agent.</li>
+</ul>
+<p><strong>Learning from All Vehicles (LAV)</strong></p>
+<ul>
+<li>
+<p><code>lav_lav</code>: The original LAV agent.</p>
+</li>
+<li>
+<p><code>lav_fast</code>: Leaderboard submission optimized for inference speed with temporal LiDAR scans.</p>
+</li>
+</ul>
+<p><strong>Learning By Cheating (LBC)</strong></p>
+<ul>
+<li>
+<p><code>lbc_nc</code>: Learning By Cheating, the NoCrash model.</p>
+</li>
+<li>
+<p><code>lbc_lb</code>: Learning By Cheating, the Leaderboard model.</p>
+</li>
+</ul>
+<p><strong>World on Rails (WoR)</strong></p>
+<ul>
+<li>
+<p><code>wor_nc</code>: World on Rails, the NoCrash model.</p>
+</li>
+<li>
+<p><code>wor_lb</code>: World on Rails, the Leaderboard model.</p>
+</li>
+</ul>
+<h2 id="creating-a-runner">Creating a Runner</h2>
+<p>Runners are objects which will manage your simulation instances. The provided runners are capable of searching a set of vehicle configurations (<code>RandomSearchRunner</code>) or environment configurations (<code>EnvironmentMatrixRunner</code>), or checking for determinism within repeated runs of the same configuration (<code>DeterminismRunner</code>). You can also create your own runners if you need further functionality. </p>
+<p>Some runners require additional configuration objects. This example will show how to set up a <code>RandomSearchRunner</code>. The <code>RandomSearchRunner</code> requires an <code>EvaluationStrategy</code>, and can optionally have multiple <code>EndConditions</code>. The runner will continue until one of the end conditions is met.</p>
+<p>First, we choose an evaluation strategy. The <code>EgoMinimumDistanceEvaluationStrategy</code> scores the scenario according to the minimum distance reached between any two ego vehicles during the simulation:</p>
+<pre><code>evaluation_strategy = EgoMinimumDistanceEvaluationStrategy()
+evaluator = ScenarioEvaluator(evaluation_strategy)
+</code></pre>
+<p>We then specify an end condition. The <code>NumSearchesEndCondition</code> will trigger after a fixed number of trial configurations have been used. In this case, we will search 15 trial configurations.</p>
+<pre><code>end_condition = NumSearchesEndCondition(15)
+</code></pre>
+<p>We can now construct, configure and run our <code>RandomSearchRunner</code> object.</p>
+<pre><code>runner = RandomSearchRunner(client=client, steps=150, evaluator=evaluator)
+runner.set_initial_vehicle_configuration(vehicles=vehicles)
+runner.add_end_condition(end_condition)
+runner.run()
+runner.write("search_results.json")
+</code></pre>
+<h1 id="extending-adsos">Extending ADSoS</h1>
+<p>ADSoS objects can be extended to add custom functionality.</p>
+<h2 id="creating-your-own-end-condition">Creating Your Own End Condition</h2>
+<p>Custom end conditions can be created by extending the <code>SearchEndCondition</code> base class which is defined as shown below:</p>
+<pre><code>class SearchEndCondition(ABC):
+    def __init__(self):
+        self.runner = None
+
+    def set_search_runner(self, runner):
+        self.runner = runner
+
+    @abstractmethod
+    def is_condition_met(self) -&gt; bool:
+        pass
+</code></pre>
+<p>The <code>set_search_runner</code> method is automatically called when an <code>EndCondition</code> is added to a <code>Runner</code>, so all that is really required to add a new condition is to extend this class and override the <code>is_condition_met</code> method. This method is automatically called at the end of each scenario run and should return true when the condition is triggered and the simulation should end. As an example, to create a new end condition which triggers when a scenario is found with an evaluation score above a given threshold, we could do the following:</p>
+<pre><code>from runners.search.end_conditions.search_end_condition import SearchEndCondition
+
+class ThresholdScoreEndCondition(SearchEndCondition):
+    def __init__(self, threshold_score: int):
+        super().__init__()
+        self.threshold_score = threshold_score
+
+    def is_condition_met(self):
+        return self.runner.results[-1][0] &gt;= self.threshold_score
+</code></pre>
+<h2 id="creating-your-own-evaluation-strategy">Creating Your Own Evaluation Strategy</h2>
+<p>Evaluation strategies give a score to a simulation run. They inherit from the <code>ScenarioEvaluationStrategy</code> class which is defined as:</p>
+<pre><code>class ScenarioEvaluationStrategy(ABC):
+    def __init__(self):
+        self.scores: List[float] = []
+
+    @abstractmethod
+    def evaluate_frame(self, world, ego_vehicles: List[PCLA]) -&gt; float:
+        pass
+
+    def get_scores(self) -&gt; List[float]:
+        return self.scores
+
+    def reset(self) -&gt; None:
+        self.scores = []
+</code></pre>
+<p>The <code>evaluate_frame</code> method is called at the end of each simulation step and should be overridden to return a score. The <code>ScenarioEvaluator</code> object will aggregate the per-frame scores to produce a final score for the scenario configuration.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
 </html>
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-04-20 11:36:48.757548+00:00
+Build Date UTC : 2026-05-01 10:12:22.350521+00:00
 -->
