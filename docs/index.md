@@ -304,3 +304,8 @@ Evaluation strategies give a score to a simulation run. They inherit from the `S
             self.scores = []
 
 The `evaluate_frame` method is called at the end of each simulation step and should be overridden to return a score. The `ScenarioEvaluator` object will aggregate the per-frame scores to produce a final score for the scenario configuration.
+
+### Creating Your Own Runner
+Runners govern the structure of how scenarios will be run within ADSoS. If you wish to create your own, it is easiest to copy one of the existing runners and modify it as necessary. The key methods to consider are:
+- **run_single_scenario**: defines how a single scenario iteration should be run
+- **run_scenarios**: defines how the collection of scenarios will be run. This could include instructions for generating the next scenario configuration or controlling repetitions. These aspects can also be delegated to external classes using the strategy pattern.
