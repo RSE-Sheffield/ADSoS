@@ -41,6 +41,10 @@ class RandomSearchRunner:
         return False
 
     def _run_scenarios(self):
+        """
+        Runs a scenario, records its score and generates the next configuration
+        until one of the end conditions is met
+        """
         while not self.any_end_conditions_met():
             self._run_single_scenario()
             self._record_config_and_score()
@@ -48,11 +52,13 @@ class RandomSearchRunner:
             self._generate_next_configuration()
 
     def _generate_next_configuration(self):
+        """ Get the next configuration """
         for i, _v in enumerate(self.vehicles):
             self.vehicles[i].spawn_point_id = random.randint(0, 87)
             self.vehicles[i].end_point_id = random.randint(0, 87)
 
     def _record_config_and_score(self):
+        """ Save the configuration and score """
         score = self.evaluator.get_score()
         result = [score]
         for vehicle in self.vehicles:
@@ -61,6 +67,7 @@ class RandomSearchRunner:
         self.results.append(result)
 
     def _report(self):
+        """ Could be extended to print some summary results """
         print("Search completed")
 
     def write(self, file_path):
@@ -69,6 +76,7 @@ class RandomSearchRunner:
             json.dump(self.results, file)
 
     def _run_single_scenario(self):
+        """ Runs the current scenario """
         try:
             # Configure the world
             world_manager = WorldManager(self.client)

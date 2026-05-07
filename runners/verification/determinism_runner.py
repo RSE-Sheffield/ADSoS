@@ -16,21 +16,26 @@ class DeterminismRunner:
         self.repetitions = repetitions
 
     def set_vehicle_configuration(self, vehicles: List[ADSoSVehicleConfiguration]) -> None:
+        """ Sets the vehicle configuration """
         self.vehicles = vehicles
-        
+
     def _run_scenarios(self):
+        """
+        Runs the scenario until the required number of repetitions has been met
+        """
         run = 0
         while run < self.repetitions:
             self._run_single_scenario(run)
             run += 1
-            
+
     def _validate(self) -> bool:
+        """ Check all repetitions produced identical results """
         other_rep = 1
         while (other_rep < self.repetitions):
             if not filecmp.cmp(f'r{other_rep}.json', 'r0.json'):
                 return False
             other_rep += 1
-        
+
         return True
 
     def _run_single_scenario(self, run_number: int):
@@ -44,21 +49,21 @@ class DeterminismRunner:
 
             # Create our ADS manager
             adsos = ADSoS(world, self.client)
-            
+
             # Add the vehicles
             adsos.add_vehicles(self.vehicles)
-            
+
             # Create the logger
             logger = EgoVehicleLogger(f'r{run_number}.json')
-            
+
             # Main loop
             frame = 0
             while frame < self.steps:
-                adsos.next_action() 
+                adsos.next_action()
                 logger.record_locations(adsos.ego_vehicles)
                 world.tick()
                 frame += 1
-    
+
         finally:
             logger.write()
 

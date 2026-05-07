@@ -42,6 +42,10 @@ class EnvironmentMatrixRunner:
         return False
 
     def _run_scenarios(self):
+        """
+        Runs a scenario, records its score and generates the next configuration
+        until one of the end conditions is met
+        """
         while not self.any_end_conditions_met() and self.environment_matrix:
             self._run_single_scenario()
             self._record_config_and_score()
@@ -49,9 +53,11 @@ class EnvironmentMatrixRunner:
             self._generate_next_configuration()
 
     def _generate_next_configuration(self):
+        """ Get the next configuration """
         self.environment_matrix.pop(0)
 
     def _record_config_and_score(self):
+        """ Save the configuration and score """
         score = self.evaluator.get_score()
         result = [score]
         for vehicle in self.vehicles:
@@ -61,6 +67,7 @@ class EnvironmentMatrixRunner:
         self.results.append(result)
 
     def _report(self):
+        """ Could be extended to print some summary results """
         print("Search completed")
 
     def write(self, file_path):
@@ -69,6 +76,7 @@ class EnvironmentMatrixRunner:
             json.dump(self.results, file)
 
     def _run_single_scenario(self):
+        """ Runs the current scenario """
         try:
             # Configure the world
             world_manager = WorldManager(self.client)
