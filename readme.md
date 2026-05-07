@@ -43,7 +43,14 @@ Pull in the PCLA submodule:
 
 Set up PCLA according to [its instructions](https://github.com/MasoudJTehrani/PCLA#)
 
-### Running the Examples
+## Building the Documentation
+
+### Building Documentation Locally
+
+1. Run `mkdocs build`
+2. The documentation will now be generated in the `site` directory, accessible by opening `index.html`
+
+## Running the Examples
 
 Four examples are available:
 
