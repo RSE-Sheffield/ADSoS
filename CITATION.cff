@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: ADSoS
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Matthew
+    family-names: Leach
+    affiliation: University of Sheffield
+  - given-names: Sanjeetha
+    family-names: Pennada
+    affiliation: University of Sheffield
+repository-code: 'https://github.com/RSE-Sheffield/ADSoS'
+abstract: >-
+  Python package providing support for multiple ADS
+  controlled vehicles in carla
+license: MIT
