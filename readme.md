@@ -1,31 +1,31 @@
 ## Installation
 ADSoS has been tested with:
 
-- Carla 0.9.15
-- Python 3.8
+- Carla 0.9.16
+- Python 3.8-3.10
 - Ubuntu 24.04
 
 ### Prerequisites
 
-- Carla 0.9.15
-- Python 3.8
+- Carla 0.9.15/0.9.16
+- Python 3.8+
 
-#### Python 3.8
+#### Python 3.10
 
 Install the `pyenv` application via your package manager, e.g.
 
 `sudo apt install pyenv`
 
-Install Python 3.8 using pyenv:
+Install Python 3.10 using pyenv:
 
-`pyenv install 3.8`
+`pyenv install 3.10`
 
-Open a shell using Python 3.8:
+Open a shell using Python 3.10:
 
-`pyenv shell 3.8`
+`pyenv shell 3.10`
 
 #### Carla
-Set up and install [Carla 0.9.15](https://github.com/carla-simulator/carla/releases/tag/0.9.15) according to [its instructions](https://carla.readthedocs.io/en/latest/start_quickstart/)
+Set up and install [Carla 0.9.16](https://github.com/carla-simulator/carla/releases/tag/0.9.16) according to [its instructions](https://carla.readthedocs.io/en/latest/start_quickstart/)
 
 ### Installing ADSoS
 
